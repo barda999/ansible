@@ -1,0 +1,12 @@
+---
+- hosts: all
+  gather_facts: "no"
+  tasks:
+    - name: "Copy bashrc"
+      copy:
+        src: "./files/.bashrc"
+        dest: "~/.bashrc" 
+    - name: "Copy bardiarc"
+      copy:
+        src: "./files/.bardiarc"
+        dest: "~/.bardiarc"
